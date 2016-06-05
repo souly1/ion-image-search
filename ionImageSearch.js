@@ -128,10 +128,11 @@ angular.module('ion-image-search', ['ionic'])
                                 successiveFails++;
                                 onFailedGettingImages();
 
-                                if ($scope.displayedImages.length==0){
+                                if (!$scope.stopAutoLoad && $scope.displayedImages.length==0){
                                     $scope.loadMoreImages();
                                 } else {
                                     $scope.$broadcast('scroll.infiniteScrollComplete');
+                                    $scope.searching = false;//Required if all searches failed
                                 }
                             });
                     } else {
