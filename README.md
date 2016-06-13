@@ -2,9 +2,14 @@
 
 An Ionic service for searching an image from the web with an endless scroll, similar to Whatsapps `Search web` feature when defining image for group.
 
+# Install
+
+npm: npm install ion-image-search
+bower: bower install ion-image-search
+
 # Demo:
 
-Will add a plunker in the future
+[Plunker Demo Using Bing](http://plnkr.co/edit/ThyM5ooHWFzjZcc50hJ7?p=preview)
 
 Demo can be seen in app:
 
@@ -89,7 +94,7 @@ Don't forget to enter your own keys to the different search providers. you can r
 
 _Google_ -
 
-_Bing_ -
+_Bing_ - go to [azure](https://datamarket.azure.com/) and get a key. To get auth value take the app key previously aquired add ':' to the start and transform it into base64 with a leading. This value will be set using: 'Basic' authetication, e.g if your key is x set in the ionImageSearch.config.js file auth: 'basic x'. See (here)[http://stackoverflow.com/questions/27311286/what-are-the-ajax-authorization-headers-for-a-bing-api-request/27315449#27315449] for additional info
 
 _Flickr_ -
 
