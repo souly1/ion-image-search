@@ -38,8 +38,8 @@ angular.module('ion-image-search').factory('bingSearch', ['$injector', '$q', '$h
     };
 
     var handleDataReturned = function(data){
+        var retval = [];
         if (data.d && data.d.results && data.d.results.length > 0) {
-            var retval = [];
             data.d.results.forEach(function (result) {
                 //Thumbnail and not direct to avoid security issues that Chrome may popup
                 retval.push({url: result.Thumbnail.MediaUrl});
