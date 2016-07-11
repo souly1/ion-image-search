@@ -59,8 +59,12 @@ Inject $webImageSelector and call `show` to display the modal view:
 $webImageSelector.show(configuration);
 ```
 
-The `show` method receives one optional parameter
+The `show` method receives one optional configuration parameter and returns an object with 2 fields: `image` and `searchString`
 
+## Return object
+
+`image` - The image object selected, has property `url` which is url of the image
+`searchString` - The search string used to retrieve the image
 ## Configuration Attributes
 
 The configuration attributes and default values can be found in the `ionImageSearch.config.js` file

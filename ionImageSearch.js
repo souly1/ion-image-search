@@ -144,6 +144,11 @@ angular.module('ion-image-search', ['ionic'])
             };
 
             $scope.submitSearch = function() {
+                try {
+                    cordova.plugins.Keyboard.close();
+                } catch (err){
+                    $log.warn('failed to close keyboard');
+                }
                 $scope.displayedImages = [];
                 successiveFails = 0;
                 imageLoadIndexStart = 1;
@@ -171,7 +176,7 @@ angular.module('ion-image-search', ['ionic'])
             $scope.onImageClicked = function(image){
                 modalObject.remove();
                 modalObject = null;
-                showDeferred.resolve(image);
+                showDeferred.resolve({image:image, searchString:currentSearch});
             };
 
             reset();
