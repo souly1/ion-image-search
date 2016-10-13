@@ -54,13 +54,21 @@ Or just add the minified version:
 angular.module('myApp', ['ion-image-search']);
 ```
 
-Inject $webImageSelector and call `show` to display the modal view:
+Inject $webImageSelector and call init to configure with custom configuration and/or scope
 ```javascript
-$webImageSelector.show(configuration);
+$webImageSelector.init(configuration, scope);
 ```
 
-The `show` method receives one optional configuration parameter and returns an object with 2 fields: `image` and `searchString`
+The `init` method receives two optional parameters: configuration parameter and scope parameter
 
+Then call `show` to display the modal view:
+```javascript
+$webImageSelector.show();
+```
+
+The `show` method returns an object with 2 fields: `image` and `searchString`
+
+An additional method available is getSearchProviderOptions which returns all provider options available according to providers in configuration
 ## Return object
 
 `image` - The image object selected, has property `url` which is url of the image
@@ -69,11 +77,11 @@ The `show` method receives one optional configuration parameter and returns an o
 
 The configuration attributes and default values can be found in the `ionImageSearch.config.js` file
 
-- `maxSuccessiveFails` - Maximum number of seccesive search fails till infinite scroll stops or moving to next service provider if array supplied (see below). default is `5`
+- `maxSuccessiveFails` - Maximum number of successive search fails till infinite scroll stops or moving to next service provider if array supplied (see below). default is `5`
 - `imgSize` - the size of image we want. Default is `small`
 - `fileType` - the image file extension. Default is `jpg`
 - `searchProviders` - An array that Specifies search providers to use.
-                                If more than one is supplied to the array than loads from each service provider in order if service provider failed succesively the configuration value of `maxSuccessiveFails` number of times.
+                                If more than one is supplied to the array than loads from each service provider in order if service provider failed successively the configuration value of `maxSuccessiveFails` number of times.
                                 Default out of the box is set to use `Google, Bing, Flickr` in that order
 
 ## Extending the provider list
@@ -104,7 +112,7 @@ _Flickr_ -
 
 ## Testing
 
-TBD. Currently only manually
+Karma & Jasmine
 
 ## License
 

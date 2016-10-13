@@ -1,0 +1,38 @@
+{
+  "name": "ion-image-search",
+  "version": "0.2.0",
+  "homepage": "https://github.com/souly1/ion-image-search",
+  "authors": [
+    "Ophir Stern <souly01@gmail.com>"
+  ],
+  "main": "ionImageSearch.js",
+  "description": "An Ionic service for searching an image from the web with an endless scroll, similar to Whatsapps `Search web` feature when defining image for group",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.3.1",
+    "jasmine-jquery": "^2.1.1"
+  },
+  "dependencies": {
+    "ionic": "^1.3.1"
+  },
+  "keywords": [
+    "ionic",
+    "directive",
+    "service",
+    "web search",
+    "search",
+    "image search",
+    "web image search",
+    "google image search",
+    "bing image search",
+    "flickr image search",
+    "whatsapp"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "screenshots",
+    "test"
+  ]
+}

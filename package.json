@@ -7,7 +7,12 @@
   ],
   "description": "An Ionic service for searching an image from the web with an endless scroll, similar to Whatsapps `Search web` feature when defining image for group.",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "jasmine": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2"
+  },
   "scripts": {},
   "keywords": [
     "ionic",
@@ -19,7 +24,8 @@
     "web image search",
     "google image search",
     "bing image search",
-    "flickr image search"
+    "flickr image search",
+    "whatsapp"
   ],
   "author": "Ophir Stern",
   "license": "MIT",
@@ -37,8 +43,6 @@
     "node_modules",
     "bower_components",
     "screenshots",
-    "icons",
-    "test",
-    "tests"
+    "test"
   ]
 }
