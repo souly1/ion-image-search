@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/souly1/ion-image-search.svg?branch=master)](https://travis-ci.org/souly1/ion-image-search)
+
 # ion-image-search
 
 An Ionic service for searching an image from the web with an endless scroll, similar to Whatsapps `Search web` feature when defining image for group.
